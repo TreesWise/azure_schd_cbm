@@ -61,7 +61,7 @@ def test_function(mytimer: func.TimerRequest) -> None:
 
     predict_url = "https://smartmaintenance.azurewebsites.net/forecast-14days"
     headers = {"Authorization": f"Bearer {access_token}"}
-    print('schedular for today has been completed!!!')
   
 
     prediction_response = requests.post(predict_url, headers=headers) #, json=input_data
+    print(f"schedular for {datetime.datetime.now().strftime('%Y-%m-%d')} has been completed!!!")
